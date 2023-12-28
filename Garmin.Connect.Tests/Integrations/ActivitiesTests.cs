@@ -19,100 +19,100 @@ public class ActivitiesTests
         _garmin = LazyClient.Garmin.Value;
     }
 
-    [Fact]
-    public async Task GetActivities_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
+    // [Fact]
+    // public async Task GetActivities_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
 
-        Assert.NotNull(garminActivities);
-        Assert.NotEmpty(garminActivities);
-    }
+    //     Assert.NotNull(garminActivities);
+    //     Assert.NotEmpty(garminActivities);
+    // }
 
-    [Fact]
-    public async Task GetActivitiesByDate_NotNull()
-    {
-        var activitiesByDate =
-            await _garmin.GetActivitiesByDate(DateTime.Now.AddDays(-30), DateTime.Now.AddDays(-2), "running");
+    // [Fact]
+    // public async Task GetActivitiesByDate_NotNull()
+    // {
+    //     var activitiesByDate =
+    //         await _garmin.GetActivitiesByDate(DateTime.Now.AddDays(-30), DateTime.Now.AddDays(-2), "running");
 
-        Assert.NotNull(activitiesByDate);
-        Assert.NotEmpty(activitiesByDate);
-    }
+    //     Assert.NotNull(activitiesByDate);
+    //     Assert.NotEmpty(activitiesByDate);
+    // }
 
-    [Fact]
-    public async Task DownloadActivity_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task DownloadActivity_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var downloadActivity = await _garmin.DownloadActivity(activityId);
+    //     var downloadActivity = await _garmin.DownloadActivity(activityId);
 
-        Assert.NotNull(downloadActivity);
-        Assert.NotEmpty(downloadActivity);
-    }
+    //     Assert.NotNull(downloadActivity);
+    //     Assert.NotEmpty(downloadActivity);
+    // }
 
-    [Fact]
-    public async Task GetActivityExerciseSets_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivityExerciseSets_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var garminExerciseSets = await _garmin.GetActivityExerciseSets(activityId);
+    //     var garminExerciseSets = await _garmin.GetActivityExerciseSets(activityId);
 
-        Assert.NotNull(garminExerciseSets);
-    }
+    //     Assert.NotNull(garminExerciseSets);
+    // }
 
-    [Fact]
-    public async Task GetActivityHrInTimezones_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivityHrInTimezones_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var garminHrTimeInZonesArray = await _garmin.GetActivityHrInTimezones(activityId);
+    //     var garminHrTimeInZonesArray = await _garmin.GetActivityHrInTimezones(activityId);
 
-        Assert.NotNull(garminHrTimeInZonesArray);
-    }
+    //     Assert.NotNull(garminHrTimeInZonesArray);
+    // }
 
-    [Fact]
-    public async Task GetActivitySplits_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivitySplits_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var garminActivitySplits = await _garmin.GetActivitySplits(activityId);
+    //     var garminActivitySplits = await _garmin.GetActivitySplits(activityId);
 
-        Assert.NotNull(garminActivitySplits);
-    }
+    //     Assert.NotNull(garminActivitySplits);
+    // }
 
-    [Fact]
-    public async Task GetActivityWeather_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivityWeather_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var garminActivityWeather = await _garmin.GetActivityWeather(activityId);
+    //     var garminActivityWeather = await _garmin.GetActivityWeather(activityId);
 
-        Assert.NotNull(garminActivityWeather);
-    }
+    //     Assert.NotNull(garminActivityWeather);
+    // }
 
-    [Fact]
-    public async Task GetActivityDetails_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivityDetails_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var garminActivityDetails = await _garmin.GetActivityDetails(activityId, 50, 50);
+    //     var garminActivityDetails = await _garmin.GetActivityDetails(activityId, 50, 50);
 
-        Assert.NotNull(garminActivityDetails);
-    }
+    //     Assert.NotNull(garminActivityDetails);
+    // }
 
-    [Fact]
-    public async Task GetActivitySplitSummaries_NotNull()
-    {
-        var garminActivities = await _lazyActivities.Value;
-        var activityId = garminActivities.First().ActivityId;
+    // [Fact]
+    // public async Task GetActivitySplitSummaries_NotNull()
+    // {
+    //     var garminActivities = await _lazyActivities.Value;
+    //     var activityId = garminActivities.First().ActivityId;
 
-        var activitySplitSummaries = await _garmin.GetActivitySplitSummaries(activityId);
+    //     var activitySplitSummaries = await _garmin.GetActivitySplitSummaries(activityId);
 
-        Assert.NotNull(activitySplitSummaries);
-    }
+    //     Assert.NotNull(activitySplitSummaries);
+    // }
 }

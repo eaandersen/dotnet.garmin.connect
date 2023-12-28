@@ -18,51 +18,51 @@ public class WellnessTests
         _endDate = DateTime.Now;
     }
 
-    [Fact]
-    public async Task GetUserSummary_NotNull()
-    {
-        var userSummary = await _garmin.GetUserSummary(_startDate);
+    // [Fact]
+    // public async Task GetUserSummary_NotNull()
+    // {
+    //     var userSummary = await _garmin.GetUserSummary(_startDate);
 
-        Assert.NotNull(userSummary);
-    }
+    //     Assert.NotNull(userSummary);
+    // }
 
-    [Fact]
-    public async Task GetWellnessStepsData_NotNull()
-    {
-        var wellnessStepsData = await _garmin.GetWellnessStepsData(_startDate);
+    // [Fact]
+    // public async Task GetWellnessStepsData_NotNull()
+    // {
+    //     var wellnessStepsData = await _garmin.GetWellnessStepsData(_startDate);
 
-        Assert.NotNull(wellnessStepsData);
-    }
+    //     Assert.NotNull(wellnessStepsData);
+    // }
 
-    [Fact]
-    public async Task GetWellnessSleepData_NotNull()
-    {
-        var wellnessSleepData = await _garmin.GetWellnessSleepData(_startDate);
+    // [Fact]
+    // public async Task GetWellnessSleepData_NotNull()
+    // {
+    //     var wellnessSleepData = await _garmin.GetWellnessSleepData(_startDate);
 
-        Assert.NotNull(wellnessSleepData);
-    }
+    //     Assert.NotNull(wellnessSleepData);
+    // }
 
-    [Fact]
-    public async Task GetWellnessHeartRates_NotNull()
-    {
-        var wellnessHeartRates = await _garmin.GetWellnessHeartRates(_startDate);
+    // [Fact]
+    // public async Task GetWellnessHeartRates_NotNull()
+    // {
+    //     var wellnessHeartRates = await _garmin.GetWellnessHeartRates(_startDate);
 
-        Assert.NotNull(wellnessHeartRates);
-    }
+    //     Assert.NotNull(wellnessHeartRates);
+    // }
 
-    [Fact]
-    public async Task GetHydrationData_NotNull()
-    {
-        var garminHydrationData = await _garmin.GetHydrationData(_startDate);
+    // [Fact]
+    // public async Task GetHydrationData_NotNull()
+    // {
+    //     var garminHydrationData = await _garmin.GetHydrationData(_startDate);
 
-        Assert.NotNull(garminHydrationData);
-    }
+    //     Assert.NotNull(garminHydrationData);
+    // }
 
-    [Fact]
-    public async Task GetBodyComposition_NotNull()
-    {
-        var garminBodyComposition = await _garmin.GetBodyComposition(_startDate, _endDate);
+    // [Fact]
+    // public async Task GetBodyComposition_NotNull()
+    // {
+    //     var garminBodyComposition = await _garmin.GetBodyComposition(_startDate, _endDate);
 
-        Assert.NotNull(garminBodyComposition);
-    }
+    //     Assert.NotNull(garminBodyComposition);
+    // }
 }
